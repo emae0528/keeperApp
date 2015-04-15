@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Opensans";
+  src: url(fonts/gillsansmt.ttf) format("truetype");
+}
+
+
+body {
+	margin: 10px;
+	background-color: rgb(49,29,76);
+}
+
+#entryList {
+	width: 100%;
+}
+
+span {
+  position: relative;
+  font-family: "Opensans";
+}
+
+#entryList div {
+	width: 100%;
+	padding: 10px 0px 10px 0px;
+	margin-bottom: 10px;
+	background-color: #c0c0c0;
+}
+
+button {
+	width: 100%;
+	padding: 10px 0px 10px 0px;
+	font-size: 1.1em;
+}
+
+input {
+	width: 100%;
+	padding: 10px 0px 10px 0px;
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
+	padding: 10px 0px 10px 0px;
+}
+
+.homeButton {
+	margin-top: 20px;
+}
+
+.imgDisplay {
+	width: 100%;
+}

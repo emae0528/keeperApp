@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Gill";
+  src: url(fonts/gillsansmt.ttf) format("truetype");
+}
+/*------ Jewelry_input----------*/
+
+#jewelry_input{
+	background-color: rgb(49,29,76);
+	height: 100%;
+}
+.col-xs-6.img_container a{
+	  color: white;
+	  position: absolute;
+	  bottom: 0;
+	  right: 0;
+	  width: 100px;
+}
+.heading{
+	margin: 0px auto;
+}
+
+.heading p{
+	color: white;
+}
+
+table{
+	margin: 0px auto;
+}
+
+.col-xs-6.img_container{
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.img_container img{
+	width: 100%;
+}
+
+strong {
+  font-size: 18px;
+  text-align: center;
+  text-decoration:underline;
+  font-family: "Gill";
+}
+
+p{
+	font-size: 15px;
+}
+
+
+.button_done{
+
+	color: white;
+}
+
+.button_back{
+	color: white;
+}
+
+button{
+	background-color: transparent;
+	color: white;
+	border: transparent;
+}
+
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{
+	border: none;
+	font-family: "Gill";
+}
+
+.col-xs-6.button_back {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-family: "Gill";
+}
+a.ui-link {
+  color: white;
+}
+
+.title_form{
+	font-family: "Gill";
+}
+
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow:hover {
+  background: transparent;
+  color: white;
+}
+
+/*----------JEWELRY REPAIR-----------*/
+
+.repair_input{
+	margin-top: 30px;
+}
+
+.comments_repair{
+	margin-top: 10px;
+}
+
+/*---------footer--------*/
+
+.tags{
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.col-xs-6.footer_tags{
+	background-color: rgb(20,17,35);
+}
+
+.footer_img{
+	background-color: rgb(20,17,35);
+}
+
+footer{
+	background-color: rgb(20,17,35);
+}

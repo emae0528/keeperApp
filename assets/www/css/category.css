@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "gill";
+  src: url(fonts/gillsansmt.ttf) format("truetype");
+}
+
+#category{
+	background-color: rgb(49,29,76);
+	color: white;
+	height: 100%;
+}
+
+.title{
+	text-align: center;
+	font-family: "gill";
+}
+
+p{
+	font-family: "gill";
+}
+
+img {
+  margin-top: 15px;
+}
