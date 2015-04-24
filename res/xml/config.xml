@@ -52,8 +52,8 @@
     <plugin name="Echo" value="org.apache.cordova.Echo" />
     <plugin name="Globalization" value="org.apache.cordova.Globalization"/>
 </plugins>
-<feature name="Camera">
-    <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
-</feature>
+<feature name="MyPluginName">
+    <param name="android-package" value="com.phonegap.plugins.plugin.class" />
+    </feature>
 </cordova>
 
