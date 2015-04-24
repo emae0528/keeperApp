@@ -7,86 +7,96 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/input.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         <title></title>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/zepto.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/stamp.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/diary.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
     </head>
     <body>
         <div id="jewelry_input">
             <div class="container">
                 <div class="content">
-                    <div class="heading">
-                        <table>
-                        <tr>
-                            <td><img src="img/stamp.png"></td>
-                            <td><p>STAMP</p></td>
-                        </tr>
+                    <div data-role="page" id="pageone">
+                        <div class="heading">
+                            <table>
+                            <tr>
+                                <td><img src="img/stamp.png"></td>
+                                <td><p>STAMP</p></td>
+                            </tr>
+                            </table>
+                        </div>
+                        <form id="frmCadastre" data-ajax="false" method="post" action="#pagetwo">
+                            <div class="row">
+                                <div class="col-xs-6 img_container"><img src="img/img.jpg"></div>
+                                <div class="col-xs-6 img_container"><img src="img/img.jpg"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <input class="form-control" type="text" id="scott" placeholder="SCOTT #">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input class="form-control" type="text" id="issue" placeholder="ISSUE">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <input class="form-control" id="color" type="text" placeholder="COLOR">
+                                </div>
+                                <div class="col-xs-3">
+                                    <input class="form-control" id="grade" type="text" placeholder="GRADE">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input class="form-control" id="country" type="text" placeholder="COUNTRY">
+                                </div>
+                            </div>  
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <input class="form-control" id="denomination" type="text" placeholder="DENOMINATION">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <input class="form-control" type="text" id="pse" placeholder="PSE CERTIFICATE #">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <textarea class="form-control" rows="5" id="comments" placeholder="COMMENTS"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row button_footer">
+                                <div class="col-xs-6 button_back">
+                                    <a href="category.html" rel="external">BACK</a>
+                                </div>
+                               <div class="col-xs-6 button_done jewelry_save">
+                                    <input type="submit" value="SAVE"/>
+                                </div>  
+                            </div>
+                        </form>
+                    </div>
+
+                    <div data-role="page" id="pagetwo">
+                        <table  id="tblList" style="color:white;">
                         </table>
                     </div>
-
-                    <div class="row">
-                        <div class="col-xs-6 img_container"><img src="img/img.jpg"></div>
-                        <div class="col-xs-6 img_container"><img src="img/img.jpg"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input class="form-control" placeholder="SCOTT #">
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control" placeholder="ISSUE">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <input class="form-control" placeholder="COLOR">
-                        </div>
-                        <div class="col-xs-3">
-                            <input class="form-control" placeholder="GRADE">
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="form-control" placeholder="COUNTRY">
-                        </div>
-                    </div>  
-
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <input class="form-control" placeholder="DENOMINATION">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <input class="form-control" placeholder="PSE CERTIFICATE #">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <textarea class="form-control" rows="5" placeholder="COMMENTS"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="row button_footer">
-                        <div class="col-xs-6 button_back"><button>Back</button></div>
-                        <div class="col-xs-6 button_done"><button>Done</button></div>
-                    </div>
-
-                    <footer class="row">
-                        <div class="col-xs-6 footer_img"><img src="img/home.png"></div>
-                        <div class="col-xs-6 footer_tags"> <p class="tags">KEEPER</p></div>
-                       
-                    </footer>
                 </div>
             </div>
         </div>
-        
+        <div data-role="footer" data-position="fixed" class="row footer">
+            <div class="col-xs-6 footer_img"><img src="img/home.png"></div>
+            <div class="col-xs-6 footer_tags"> <p class="tags">KEEPER</p></div>
+        </div>
     </body>
 </html>

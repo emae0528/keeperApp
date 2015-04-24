@@ -7,8 +7,8 @@ $(function(){
 
 	tbClients = JSON.parse(tbClients); //Converts string to object
 
-	 if(tbClients == null) //If there is no data, initialize an empty array
-	 	tbClients = [];
+	if(tbClients == null) //If there is no data, initialize an empty array
+		tbClients = [];
 
 	function Add(){
 		var client = JSON.stringify({
@@ -21,13 +21,11 @@ $(function(){
 			Source : $("#source_jewel").val(),
 			comment : $("#comment_jewel").val()
 		});
-			tbClients.push(client);
-			localStorage.setItem("tbClients", JSON.stringify(tbClients));
-			alert("The data was saved.");
-			return true;
-			}
-
-		
+		tbClients.push(client);
+		localStorage.setItem("tbClients", JSON.stringify(tbClients));
+		alert("The data was saved.");
+		return true;
+	}
 
 	function Edit(){
 		tbClients[selected_index] = JSON.stringify({
@@ -194,15 +192,17 @@ $(function(){
 			  		"</div>" +
 		  		"</div>" +
 		  		"<div class='row'>" +
-		  			"<div class='col-xs-6 button_back'>" +
-		  			"<input type='image' value=DELETE ITEM alt='DELETE ITEM"+i+"' class='btnDelete'/>" +
+		  			"<div class='col-xs-3 button_back'>" +
+		  			"<img src='img/back.png' class='btnBack'/>" +
 		  			"</div>" +
-		  			"<div class='col-xs-6 button_back'>" +
-		  			"<input type='image' value=EDIT ITEM alt='EDIT ITEM"+i+"' class='btnEdit'/>" +
+		  			"<div class='col-xs-5 button_back' style='text-align:right;'>" +
+		  			"<img src='img/deleteItem.png' alt='Delete"+i+"' class='btnDelete'/>" +
+		  			"</div>" +
+		  			"<div class='col-xs-3 button_back edit' style='text-align:right;'>" +
+		  			"<img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/>" +
 		  			"</div>" +
 		  		"</div>"
-		  		);
-		  	
+		  		);  	
 		}
 	}
 
@@ -216,20 +216,18 @@ $(function(){
 	List();
 
 	$(".btnEdit").bind("click", function(){
-		
 		operation = "E";
-		selected_index = parseInt($(this).attr("alt").replace("Edit ITEM", ""));
-		
+		selected_index = parseInt($(this).attr("alt").replace("Edit", ""));
 		var cli = JSON.parse(tbClients[selected_index]);
-		location.href = "jewelry_form.html#pageone"+selected_index+"";
 		$("#item_num").val(cli.itemID);
 		$("#karat").val(cli.karat);
 		$("#descrip_jewelry").val(cli.Description);
 		$("#carat_weight").val(cli.carat_weight);
 		$("#gram_weight").val(cli.gram_weight);
-		$("#cost").val()(cli.cost);
-		$("#source_jewel").val()(cli.Source);
-		$("#comment_jewel").val()(cli.comment);
+		$("#cost").val(cli.cost);
+		$("#source_jewel").val(cli.Source);
+		$("#comment_jewel").val(cli.comment);
+		location.href = "#pageone?";
 	});
 
 	$(".btnDelete").bind("click", function(){

@@ -34,7 +34,7 @@
                                         </tr>
                                         </table>
                                     </div>
-                                <form id="frmCadastre" data-ajax="false" method="post" action="#pagetwo">
+
                                     <div class="col-xs-6 repair_input">
                                         <input type="text" class="form-control" id="repairNum" placeholder="REPAIR #">
                                     </div>
@@ -99,29 +99,29 @@
                                 </div>
                             </div>
 
-                             <div class="row button_footer">
-                                <div class="col-xs-6 button_back"><button>Back</button></div>
+                             <div class="row button_footer_repair" data-fullscreen="true">
+                                <div class="col-xs-6 button_back">
+                                     <a href="category.html" rel="external">BACK</a>
+                                </div>
                                <div class="col-xs-6 button_done jewelry_save">
                                     <input type="submit" value="SAVE"/>
                                 </div>  
                             </div>
                        </form>
+
                     </div>
-                      <div data-role="page" id="pagetwo">
+
+                    <div data-role="page" id="pagetwo">
                         <table  id="tblList" style="color:white;">
-
                         </table>
-                   
                     </div>
-
-                    <footer class="row">
-                        <div class="col-xs-6 footer_img"><img src="img/home.png"></div>
-                        <div class="col-xs-6 footer_tags"> <p class="tags">KEEPER</p></div>
-                       
-                    </footer>
+                    
                 </div>
             </div>
         </div>
-        
+         <div data-role="footer" data-position="fixed" class="row repair">
+            <div class="col-xs-6 footer_img"><img src="img/home.png"></div>
+            <div class="col-xs-6 footer_tags"> <p class="tags">KEEPER</p></div>
+        </div>  
     </body>
 </html>

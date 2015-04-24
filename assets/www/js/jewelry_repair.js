@@ -12,7 +12,7 @@ $(function(){
 
 	function Add(){
 		var client = JSON.stringify({
-			repairNum    : $("#repairNum").val(),
+			repairNum : $("#repairNum").val(),
 			fname    : $("#fname").val(),
 			lname  : $("#lname").val(),
 			address : $("#address").val(),
@@ -29,11 +29,10 @@ $(function(){
 			alert("The data was saved.");
 			return true;
 	}
-
 		
-
 	function Edit(){
 		jewelryRepair[selected_index] = JSON.stringify({
+			repairNum : $("#repairNum").val(),
 			fname    : $("#fname").val(),
 			lname  : $("#lname").val(),
 			address : $("#address").val(),
@@ -138,6 +137,17 @@ $(function(){
 			  			"<strong>COMMENTS:</strong>" +
 			  			"<p>" + cli.comments + "</p>" +
 			  		"</div>" +
+		  		"</div>" +
+		  		"<div class='row'>" +
+		  			"<div class='col-xs-3 button_back'>" +
+		  				"<img src='img/back.png' class='btnBack'/>" +
+		  			"</div>" +
+		  			"<div class='col-xs-5 button_back' style='text-align:right;'>" +
+		  				"<img src='img/deleteItem.png' alt='Delete"+i+"' class='btnDelete'/>" +
+		  			"</div>" +
+		  			"<div class='col-xs-3 button_back edit' style='text-align:right;'>" +
+		  				"<img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/>" +
+		  			"</div>" +
 		  		"</div>");
 			}
 		}
@@ -218,11 +228,14 @@ $(function(){
 			  		"</div>" +
 		  		"</div>" +
 		  		"<div class='row'>" +
-		  			"<div class='col-xs-6 button_back'>" +
-		  			"<input type='image' value=DELETE ITEM alt='DELETE ITEM"+i+"' class='btnDelete'/>" +
+		  			"<div class='col-xs-3 button_back'>" +
+		  				"<img src='img/back.png' class='btnBack'/>" +
 		  			"</div>" +
-		  			"<div class='col-xs-6 button_back'>" +
-		  			"<input type='image' value=EDIT ITEM alt='EDIT ITEM"+i+"' class='btnEdit'/>" +
+		  			"<div class='col-xs-5 button_back' style='text-align:right;'>" +
+		  				"<img src='img/deleteItem.png' alt='Delete"+i+"' class='btnDelete'/>" +
+		  			"</div>" +
+		  			"<div class='col-xs-3 button_back edit' style='text-align:right;'>" +
+		  				"<img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/>" +
 		  			"</div>" +
 		  		"</div>"
 		  		);
@@ -240,7 +253,6 @@ $(function(){
 	List();
 
 	$(".btnEdit").bind("click", function(){
-		
 		operation = "E";
 		selected_index = parseInt($(this).attr("alt").replace("Edit ITEM", ""));
 		var cli = JSON.parse(jewelryRepair[selected_index]);
@@ -250,13 +262,12 @@ $(function(){
 		$("#address").val(cli.address);
 		$("#phone").val(cli.phone);
 		$("#email").val(cli.email);
-		$("#instruc").val()(cli.instruc);
-		$("#cost").val()(cli.cost);
-		$("#date").val()(cli.date);
-		$("#customer_value").val()(cli.customer_value);
-		$("#comments").val()(cli.comments);
-		window.location = '#pageone?' + cli;
-
+		$("#instruc").val(cli.instruc);
+		$("#cost").val(cli.cost);
+		$("#date").val(cli.date);
+		$("#customer_value").val(cli.customer_value);
+		$("#comments").val(cli.comments);
+		location.href = "#pageone?";
 	});
 
 	$(".btnDelete").bind("click", function(){
