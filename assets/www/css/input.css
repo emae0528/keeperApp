@@ -140,7 +140,7 @@ a.ui-link {
 	background-color: rgb(20,17,35);
 	padding-left: 0px;
 	padding-right: 0px;
-	position: absolute !important;
+	
     bottom: 0;
     width: 100%;
 }
@@ -163,4 +163,8 @@ a.ui-link {
 
 .col-xs-8.ticketNum {
   margin-top: 20px;
+}
+
+#browse{
+	color: white;
 }
