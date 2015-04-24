@@ -70,12 +70,10 @@ $(function(){
 			  		"</div>" +
 			  	"</div>" +
 		  		"<div class='row'>" +
-			  		"<div class='col-xs-6 img_container'>" +
-			  			"<img src='img/img.jpg'/>" +
+			  		"<div class='col-xs-12 img_container'>" +
+			  			"<img style='width:100%;height:150px;'' id='smallImage' src=''/>" +
 			  		"</div>" +
-			  		"<div class='col-xs-6 img_container'>" +
-			  			"<img src='img/img.jpg'/>" +
-		  			"</div>" +
+
 		  		"</div>" +
 		  		"<div class='row' style='margin-top:10px;'>" +
 			  		"<div class='col-xs-4'>" +
@@ -138,12 +136,9 @@ $(function(){
 			  		"</div>" +
 			  	"</div>" +
 		  		"<div class='row'>" +
-			  		"<div class='col-xs-6 img_container'>" +
-			  			"<img src='img/img.jpg'/>" +
+			  		"<div class='col-xs-12 img_container'>" +
+			  			"<img style='width:100%;height:150px;'' id='smallImage' src=''/>" +
 			  		"</div>" +
-			  		"<div class='col-xs-6 img_container'>" +
-			  			"<img src='img/img.jpg'/>" +
-		  			"</div>" +
 		  		"</div>" +
 		  		"<div class='row' style='margin-top:10px;'>" +
 			  		"<div class='col-xs-4'>" +
