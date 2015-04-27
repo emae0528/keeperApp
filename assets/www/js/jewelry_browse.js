@@ -53,76 +53,28 @@ $(function(){
 	function List(){		
 		$("#tblList").html("");
 		$("#tblList").html(
-			"<div>"+
-			"</div>"
+			"<thead>"+
+			"	<tr>"+
+			"	<th>ACTION</th>"+
+			"	<th></th>" +
+
+			"	<th>ITEM #</th>"+
+			"	</tr>"+
+			"</thead>"+
+			"<tbody>"+
+			"</tbody>"
 			);
 		var count = tbClients.length;
 		
 			for(var i in tbClients){
 			var cli = JSON.parse(tbClients[i]);
-			$("#tblList div").append(
-		  		"<div class='row'>" +
-			  		"<div class='col-xs-4'>" +
-			  			"<strong>ITEM NUMBER:</strong>" +
-			  		"</div>" +
-			  		"<div class='col-xs-8'>" +
-			  			"<p>" + cli.itemID + "</p>" +
-			  		"</div>" +
-			  	"</div>" +
-		  		"<div class='row'>" +
-			  		"<div class='col-xs-6 img_container'>" +
-			  			"<img src='img/img.jpg'/>" +
-			  		"</div>" +
-			  		"<div class='col-xs-6 img_container'>" +
-			  			"<img src='img/img.jpg'/>" +
-		  			"</div>" +
-		  		"</div>" +
-		  		"<div class='row' style='margin-top:10px;'>" +
-			  		"<div class='col-xs-4'>" +
-			  			"<strong>DESCRIPTION:</strong>" +
-			  		"</div>" +
-			  		"<div class='col-xs-8'>" +
-			  			"<p>" + cli.Description + "</p>" +
-			  		"</div>" +
-		  		"</div>" +
-		  		"<div class='row'>" +
-			  		"<div class='col-xs-2'>" +
-			  			"<strong>KARAT:</strong>" +
-			  		"</div>" +
-			  		"<div class='col-xs-10'>" +
-			  			"<p>" + cli.karat + "</p>" +
-			  		"</div>" +
-		  		"</div>" +
-		  		"<div class='row'>" +
-			  		"<div class='col-xs-4'>" +
-			  			"<strong style='text-align:center;'>KARAT WEIGHT:</strong>" +
-			  			"<p style='text-align:center;'>" + cli.carat_weight + "</p>" +
-			  		"</div>" +
-			  		"<div class='col-xs-4'>" +
-			  			"<strong style='text-align:center;'>GRAM WEIGHT:</strong>" +
-			  			"<p style='text-align:center;'>" + cli.gram_weight + "</p>" +
-			  		"</div>" +
-			  		"<div class='col-xs-4'>" +
-			  			"<strong style='text-align:center;'>COST:</strong>" +
-			  			"<p style='text-align:center;'>" + cli.cost + "</p>" +
-			  		"</div>" +
-		  		"</div>" +
-		  		"<div class='row'>" +
-			  		"<div class='col-xs-3'>" +
-			  			"<strong>SOURCE:</strong>" +
-			  		"</div>" +
-			  		"<div class='col-xs-9'>" +
-			  			"<p>" + cli.Source + "</p>" +
-			  		"</div>" +
-		  		"</div>" +
-		  		"<div class='row'>" +
-			  		"<div class='col-xs-4'>" +
-			  			"<strong>COMMENT:</strong>" +
-			  		"</div>" +
-			  		"<div class='col-xs-8'>" +
-			  			"<p>" + cli.comment + "</p>" +
-			  		"</div>" +
-		  		"</div>");
+			$("#tblList tbody").append("<tr>"+
+									 	 "	<td><img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/><img src='img/deleteItem.png' alt='Delete"+i+"' class='btnDelete'/></td>" + 
+										 "	<td></td>" +
+										 "	<td></td>" +
+										  "	<td></td>" +
+										 "	<td>"+cli.itemID+"</td>" + 
+		  								 "</tr>");
 			}
 		
 		
@@ -149,12 +101,12 @@ $(function(){
 		$("#cost").val(cli.cost);
 		$("#source_jewel").val(cli.Source);
 		$("#comment_jewel").val(cli.comment);
-		location.href = "#pageone?";
+		location.href = "jewelry_form.html#pageone?";
 	});
 
 	$(".btnDelete").bind("click", function(){
 		selected_index = parseInt($(this).attr("alt").replace("Delete", ""));
 		Delete();
-		location.href = "#pageone";
+		location.href = "browse_jewelry.html";
 	});
 });

@@ -8,6 +8,10 @@ body, html {
   background-color: rgb(49,29,76);
 }
 
+#camera{
+    color: white;
+}
+
 .content{
     height: 100%;
     background-color: rgb(49,29,76);

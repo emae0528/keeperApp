@@ -140,7 +140,7 @@ a.ui-link {
 	background-color: rgb(20,17,35);
 	padding-left: 0px;
 	padding-right: 0px;
-	
+	position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -149,11 +149,9 @@ a.ui-link {
 	margin-left: 0px;
 }
 
-/*.row.button_footer {
-  position: fixed;
-  bottom: 39px;
-  width: 100%;
-}*/
+.row.footer.ui-footer.ui-bar-inherit{
+	position: absolute;
+}
 
 /*===== gemstones===*/
 
