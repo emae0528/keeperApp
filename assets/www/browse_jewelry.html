@@ -32,17 +32,76 @@
                         </tr>
                         </table>
                     </div>
-                    <div id="browse">
-                        <ul id="tblList" data-role="listview" data-filter="true" data-inset="true"></ul>
+                    <div data-role="page" id="pageone">
+                        <div class="search" id="browse">
+                            <ul id="tblList" data-role="listview" data-filter="true" data-inset="true"></ul>
 
-                        <table id="tblList">
-                        </table>
+                            <table id="tblList">
+                            </table>
+                        </div>
+                    </div>
+
+                    <div data-role="page" id="form">
+                        <form id="frmCadastre" data-ajax="false" method="post" action="#pagetwo">
+                            <div class="row">                  
+                               <div class="col-xs-12 img_container"><img style="width:100%;height:150px;" id="smallImage" src=""/><a href="#camera">Add Photo</a></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" id="item_num" placeholder="ITEM #">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" id="karat" placeholder="KARAT">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <textarea class="form-control" id="descrip_jewelry" placeholder="DESCRIPTION"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <input type="number" step="0.01" id="carat_weight" class="form-control" placeholder="CARAT WEIGHT">
+                                </div>
+                                <div class="col-xs-4">
+                                    <input type="number" step="0.01" id="gram_weight" class="form-control" placeholder="GRAM WEIGHT">
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <input type="number" step="0.01" id="cost" class="form-control" placeholder="COST">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <input type="text" class="form-control" id="source_jewel" placeholder="SOURCE">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <textarea class="form-control" id="comment_jewel" placeholder="COMMENTS"></textarea>
+                                </div>
+                            </div>
+
+                             <div class="row button_footer">
+                                <div class="col-xs-6 button_back">
+                                     <a href="category_browse.html" rel="external">BACK</a>
+                                </div>
+                                <div class="col-xs-6 button_done jewelry_save">
+                                    <input type="submit" value="SAVE"/>
+                                </div>  
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
         <div data-role="footer" class="row footer">
-            <div class="col-xs-6 footer_img"><img src="img/home.png"></div>
+             <div class="col-xs-6 footer_img"><a href="index.html" rel="external"><img src="img/home.png"></a></div>
             <div class="col-xs-6 footer_tags"> <p class="tags">KEEPER</p></div>
         </div>
     </body>

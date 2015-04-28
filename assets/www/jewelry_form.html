@@ -34,26 +34,6 @@
         destinationType=navigator.camera.DestinationType;
     }
 
-    // Called when a photo is successfully retrieved
-    //
-    function onPhotoDataSuccess(imageData) {
-      // Get image handle
-      //
-      var smallImage = document.getElementById('smallImage');
-
-      // Unhide image elements
-      //
-      smallImage.style.display = 'block';
-
-      // Show the captured photo
-      // The inline CSS rules are used to resize the image
-      //
-      smallImage.src = "data:image/jpeg;base64," + imageData;
-      location.href = "#pageone";
-    }
-    
-    // Called when a photo is successfully retrieved
-    //
     function onPhotoFileSuccess(imageData) {
       // Get image handle
       console.log(JSON.stringify(imageData));
@@ -66,62 +46,17 @@
       //
       smallImage.style.display = 'block';
 
-      // Show the captured photo
-      // The inline CSS rules are used to resize the image
-      //
       smallImage.src = imageData;
       location.href = "#pageone";
-    }
-
-    // Called when a photo is successfully retrieved
-    //
-    function onPhotoURISuccess(imageURI) {
-      // Uncomment to view the image file URI 
-      // console.log(imageURI);
-
-      // Get image handle
-      //
-      var largeImage = document.getElementById('largeImage');
-
-      // Unhide image elements
-      //
-      largeImage.style.display = 'block';
-
-      // Show the captured photo
-      // The inline CSS rules are used to resize the image
-      //
-      largeImage.src = imageURI;
-      location.href = "#pageone";
-    }
-
-
-
-    // A button will call this function
-    //
-    function capturePhotoWithData() {
-      // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 });
     }
 
     function capturePhotoWithFile() {
         navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
     }
-    
-    // A button will call this function
-    //
-    function getPhoto(source) {
-      // Retrieve image file location from specified source
-      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
-        destinationType: destinationType.FILE_URI,
-        sourceType: source });
-    }
 
-    // Called if something bad happens.
-    // 
     function onFail(message) {
       alert('Failed because: ' + message);
     }
-
     </script>
      
         
@@ -140,8 +75,7 @@
                     </div>
                     <div data-role="page" id="pageone">
                         <form id="frmCadastre" data-ajax="false" method="post" action="#pagetwo">
-                            <div class="row">
-                  
+                            <div class="row">                  
                                <div class="col-xs-12 img_container"><img style="width:100%;height:150px;" id="smallImage" src=""/><a href="#camera">Add Photo</a></div>
                             </div>
 
@@ -197,14 +131,19 @@
                     </div>
 
                     <div data-role="page" id="pagetwo">
+                        <div class='row'>
+                            <div class='col-xs-12 img_container'>
+                                <img style='width:100%;height:150px;' id='smallImage' src=''/>
+                            </div> 
+                         </div> 
                         <table  id="tblList" style="color:white;">
                         </table>
                     </div>
 
                    <div data-role="page" id="camera">
-                      <button onclick="capturePhotoWithFile();"><img src="img/camera.png">TAKE PICTURE</button>
-                      <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-                      <img style="display:none;" id="largeImage" src="" />
+                        <div class="cam">
+                            <button onclick="capturePhotoWithFile();"><img src="img/camera.png">TAKE PICTURE</button>
+                        </div>
                   </div>
                 </div>
             </div>
@@ -212,7 +151,7 @@
        
         
         <div data-role="footer" class="row footer">
-            <div class="col-xs-6 footer_img"><img src="img/home.png"></div>
+            <div class="col-xs-6 footer_img"><a href="index.html" rel="external"><img src="img/home.png"></a></div>
             <div class="col-xs-6 footer_tags"> <p class="tags">KEEPER</p></div>
         </div>
 

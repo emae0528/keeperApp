@@ -36,6 +36,33 @@ table{
 	width: 100%;
 }
 
+
+td{
+	text-align: center;
+}
+
+ul#tblList {
+  width: 50%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+th, td { padding: 1.5rem; }
+
+th{
+	text-align: center;
+	  margin-left: 10px;
+	   width: 100px;
+}
+
+th.item {
+  width: 100px;
+}
+
+td{
+	padding: 6px 6px 6px 12px;
+}
+
 strong {
   font-size: 18px;
   text-align: center;
@@ -44,7 +71,7 @@ strong {
 }
 
 p{
-	font-size: 15px;
+	font-size: 13px;
 }
 
 
@@ -80,7 +107,7 @@ button{
 
 img.btnEdit {
   width: 60px;
-  margin-left: 20px;
+  margin-bottom: 5px;
 }
 img.btnDelete {
   width: 105px;
@@ -140,19 +167,18 @@ a.ui-link {
 	background-color: rgb(20,17,35);
 	padding-left: 0px;
 	padding-right: 0px;
-	position: absolute;
     bottom: 0;
     width: 100%;
+    clear: both;
 }
 
 .footer.row{
 	margin-left: 0px;
 }
 
-.row.footer.ui-footer.ui-bar-inherit{
-	position: absolute;
+.cam{
+	margin-top: 30px;
 }
-
 /*===== gemstones===*/
 
 .col-xs-9.itemNum_gem{
@@ -166,3 +192,6 @@ a.ui-link {
 #browse{
 	color: white;
 }
+
+/*design of table*/
+

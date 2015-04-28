@@ -58,7 +58,7 @@ $(function(){
 			"	<th>ACTION</th>"+
 			"	<th></th>" +
 
-			"	<th>ITEM #</th>"+
+			"	<th class='item'>ITEM NUMBER</th>"+
 			"	</tr>"+
 			"</thead>"+
 			"<tbody>"+
@@ -69,10 +69,8 @@ $(function(){
 			for(var i in tbClients){
 			var cli = JSON.parse(tbClients[i]);
 			$("#tblList tbody").append("<tr>"+
-									 	 "	<td><img src='img/edit.png' alt='Edit"+i+"' class='btnEdit'/><img src='img/deleteItem.png' alt='Delete"+i+"' class='btnDelete'/></td>" + 
+									 	 "	<td><img src='img/view.png' alt='Edit"+i+"' class='btnEdit'/></td>" + 
 										 "	<td></td>" +
-										 "	<td></td>" +
-										  "	<td></td>" +
 										 "	<td>"+cli.itemID+"</td>" + 
 		  								 "</tr>");
 			}
@@ -101,7 +99,7 @@ $(function(){
 		$("#cost").val(cli.cost);
 		$("#source_jewel").val(cli.Source);
 		$("#comment_jewel").val(cli.comment);
-		location.href = "jewelry_form.html#pageone?";
+		location.href = "browse_jewelry.html#form?";
 	});
 
 	$(".btnDelete").bind("click", function(){
